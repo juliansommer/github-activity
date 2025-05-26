@@ -1,4 +1,4 @@
-module github.com/juliansommer/github-user-activity
+module github.com/juliansommer/github-activity
 
 go 1.23.4
 
