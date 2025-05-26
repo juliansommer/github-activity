@@ -34,15 +34,13 @@ go build -o github-activity
 
 ```bash
 # Using go run
-go run main.go <username>
+go run main.go <username> [-p <page>] [-n <number per page>]
 
 # Or using the built binary
-./github-activity <username>
-
-# Example:
-go run main.go juliansommer
+./github-activity <username> [-p <page>] [-n <number per page>]
 ```
 
-# TODO
-- Add flags for page numbers
-- Add output format options (JSON, table)
+# Example:
+```bash
+go run main.go juliansommer -p 1 -n 10
+```

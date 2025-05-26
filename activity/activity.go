@@ -30,8 +30,8 @@ type Commit struct {
 	Message string `json:"message"`
 }
 
-func FetchActivity(username string) ([]Event, error) {
-	response, err := http.Get(fmt.Sprintf("https://api.github.com/users/%s/events?per_page=10", username))
+func FetchActivity(username string, perPage int, pageNum int) ([]Event, error) {
+	response, err := http.Get(fmt.Sprintf("https://api.github.com/users/%s/events?per_page=%d&page=%d", username, perPage, pageNum))
 	if err != nil {
 		return nil, fmt.Errorf("error fetching user activity: %w", err)
 	}
